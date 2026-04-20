@@ -1,0 +1,61 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.player {
+  max-width: 600px;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #000000;
+  background: #0274f5;
+  font-family: sans-serif;
+}
+
+.track-title { font-weight: 600; }
+.track-sub { font-size: 13px; color: #000000; }
+
+.waveform-bar {
+  height: 50px;
+  background: #0274f5;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+.progress-row,
+.controls-row,
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.controls-row {
+  justify-content: center;
+}
+
+button {
+  padding: 8px 12px;
+  background: #0274f5;
+  border-radius: 6px;
+  border: 3px solid #000000;
+  cursor: pointer;
+}
+
+.divider {
+  height: 1px;
+  background: #000000;
+  margin: 10px 0;
+}
+
+.status-badge {
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+.status-badge.playing {
+  color: rgb(0, 0, 0);
+}

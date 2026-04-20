@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Audio Player</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h2 class="sr-only">Audio Player 𝄞</h2>
+
+<div class="player" id="player">
+  <div class="track-info">
+    <div>
+      <span class="track-title">Audio Player</span>
+      <span class="status-badge" id="statusBadge">stopped</span>
+    </div>
+    <div class="track-sub" id="trackSub">Load an audio file to begin</div>
+  </div>
+
+  <div class="waveform-bar" id="waveformBar">
+    <canvas id="waveCanvas"></canvas>
+  </div>
+
+  <div class="progress-row">
+    <span id="curTime">0:00</span>
+    <input type="range" id="seeker" min="0" max="100" value="0">
+    <span id="durTime">0:00</span>
+  </div>
+
+  <div class="controls-row">
+    <button id="btnSkipBack">«10s</button>
+    <button id="btnPlay">▶</button>
+    <button id="btnSkipFwd">10s»</button>
+    <button id="btnMute">🕪</button>
+    <button id="btnLoop">⟳</button>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="row">
+    <label>Volume</label>
+    <input type="range" id="volSlider" min="0" max="1" step="0.01" value="1">
+    <span id="volVal">100%</span>
+  </div>
+
+  <div class="row">
+    <label>Speed</label>
+    <input type="range" id="speedSlider" min="0.5" max="2" step="0.25" value="1">
+    <span id="speedVal">1.0×</span>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="row">
+    <label>File</label>
+    <input type="file" id="fileInput" accept="audio/*">
+  </div>
+
+</div>
+
+<script src="player.js"></script>
+</body>
+</html>
